@@ -7,6 +7,8 @@ import { useEffect } from 'react'
 
 const login = () => {
 
+    
+
     const route = useRouter();
     const [user, loading] = useAuthState(auth);
     const googleProvider = new GoogleAuthProvider()
