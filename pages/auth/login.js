@@ -5,43 +5,43 @@ import { useRouter } from 'next/router'
 import {useAuthState} from "react-firebase-hooks/auth"
 import { useEffect } from 'react'
 
-const login = () => {
+function Login() {
 
-    
 
-    const route = useRouter();
-    const [user, loading] = useAuthState(auth);
+
+    const route = useRouter()
+    const [user, loading] = useAuthState(auth)
     const googleProvider = new GoogleAuthProvider()
     const GoogleLogin = async () => {
-        try{
-            const result = await signInWithPopup(auth , googleProvider )
-            route.push("/");
+        try {
+            const result = await signInWithPopup(auth, googleProvider)
+            route.push("/")
         }
-        catch(err){
+        catch (err) {
             console.log(err)
         }
     }
 
     useEffect(() => {
-        if(user){
-            route.push("/")
+        if (user) {
+            route.push("/Dashboard")
         }
-        else{
+        else {
             console.log("Login")
         }
     }, [user])
 
     return (
         <div className="shadow-xl mt-32 p-10 text-gray-700 rounded-lg">
-            
+
             <h2 className="text-2xl font-medium ">Join Today</h2>
             <div className="py-4 ">
                 <h3 className="py-4">Signin with one of our providers</h3>
-                <button onClick={GoogleLogin} className="text-white bg-gray-700 w-full font-medium rounded-lg flex align-middle p-4 gap-2"> 
-                 <FcGoogle className="text-2xl" />Sign in with Google</button>
+                <button onClick={GoogleLogin} className="text-white bg-gray-700 w-full font-medium rounded-lg flex align-middle p-4 gap-2">
+                    <FcGoogle className="text-2xl" />Sign in with Google</button>
             </div>
         </div>
-    );
+    )
 }
 
-export default login;
+export default Login;

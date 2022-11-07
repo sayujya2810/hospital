@@ -11,7 +11,8 @@ module.exports = {
       },
       colors:{
         'cyan':'#06b5d4',
-        'sky':"#b8f4ff"
+        'sky':"#b8f4ff",
+        'dark':"#000b2e"
       }
     },
   },

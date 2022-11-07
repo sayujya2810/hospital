@@ -9,12 +9,12 @@ const Nav = () => {
     return (
         <nav className="flex justify-between items-center py-10">
             <Link href="/">
-                <button className="text-lg font-medium">Hospital</button>
+                <button className="text-4xl font-medium">L'Hospital</button>
             </Link>
             <ul className="flex items-center gap-10">
                 {!user && (
-                    <Link href="/auth/login">
-                        <a  className="py-2 px-4 text-small bg-cyan-500 rounded-lg text-white font-medium ml-8">Join Now</a>
+                    <Link href="/auth/Login">
+                        <a  className="py-2 px-4 ease-in-out duration-300 hover:bg-black hover text-small bg-cyan rounded-lg text-white font-medium ml-8">Join Now</a>
                     </Link>
                 )}
 
