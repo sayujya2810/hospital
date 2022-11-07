@@ -44,8 +44,4 @@ function Login() {
     )
 }
 
-<<<<<<< HEAD:pages/auth/login.js
 export default Login;
-=======
-export default login;
->>>>>>> 5735f93d1fd23224808c95ff484695ad446114d5:pages/auth/Login.js
