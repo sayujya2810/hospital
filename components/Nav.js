@@ -9,7 +9,7 @@ const Nav = () => {
     return (
         <nav className="flex justify-between items-center py-10">
             <Link href="/">
-                <button className="text-4xl font-medium">L'Hospital</button>
+                <button className="text-4xl font-medium">Hospital</button>
             </Link>
             <ul className="flex items-center gap-10">
                 {!user && (
